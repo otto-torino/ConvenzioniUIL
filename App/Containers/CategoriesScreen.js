@@ -56,7 +56,7 @@ class CategoriesScreen extends Component {
 
   render () {
     return (
-      <View>
+      <View style={{ flex:1, flexGrow:1}}>
         <Toolbar
           leftElement='menu'
           onLeftElementPress={() => navigate('DrawerOpen')}

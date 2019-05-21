@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Text, View, ScrollView } from 'react-native'
+import { Text, View, ScrollView, StyleSheet } from 'react-native'
 import Communications from 'react-native-communications'
 import HTMLView from 'react-native-htmlview'
 import FullWidthImage from './FullWidthImage'
@@ -75,6 +75,12 @@ const RetailerInfo = props => {
     })
   }
 
+  const htmlViewStyles = StyleSheet.create({
+    strong: {
+      fontWeight: 'bold'
+    }
+  })
+
   return (
     <View style={{ flex: 1 }}>
       <ScrollView>
@@ -93,6 +99,7 @@ const RetailerInfo = props => {
           </Text>
           <HTMLView
             value={props.retailer.company.text.replace(/(\r\n|\n|\r)/gm, '')}
+            stylesheet={htmlViewStyles}
           />
           <View style={{ marginTop: 20 }}>
             <Banner />

@@ -26,7 +26,7 @@ class CreditsScreen extends React.Component {
         <View style={styles.section}>
           <Text style={styles.sectionText}>
             Applicazione Convenzioni UIL{'\n'}
-            versione: 1.1.0
+            versione: 1.1.1
           </Text>
           <Text style={styles.sectionText}>Sviluppata da</Text>
           <TouchableOpacity

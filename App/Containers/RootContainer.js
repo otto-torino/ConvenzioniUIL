@@ -9,6 +9,8 @@ import networkActions from '../Redux/NetworkRedux'
 import { ThemeProvider } from 'react-native-material-ui'
 import MaterialTheme from '../Themes/Material'
 import { resetTo } from '../Services/NavigationService'
+import { SafeAreaView } from 'react-navigation'
+
 
 // Styles
 import styles from './Styles/RootContainerStyles'
@@ -85,9 +87,11 @@ class RootContainer extends Component {
   render () {
     return (
       <ThemeProvider uiTheme={MaterialTheme}>
-        <View style={styles.applicationView}>
-          <StatusBar barStyle='light-content' />
-          <ReduxNavigation />
+        <View style={styles.appContainer}>
+          <SafeAreaView style={styles.applicationView}>
+            <StatusBar barStyle='light-content' />
+            <ReduxNavigation />
+          </SafeAreaView>
         </View>
       </ThemeProvider>
     )
